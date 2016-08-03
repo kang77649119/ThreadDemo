@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -14,7 +15,7 @@
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="htl-ga-Dhr">
@@ -67,13 +68,74 @@
                                     <action selector="thread:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Sfx-yW-XTc"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Uin-82-caf">
+                                <rect key="frame" x="20" y="310" width="139" height="40"/>
+                                <state key="normal" title="GCD-barrier-async"/>
+                                <connections>
+                                    <action selector="gcdBarrierAsync:" destination="BYZ-38-t0r" eventType="touchUpInside" id="89F-uf-QY5"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hww-Ro-AEt">
+                                <rect key="frame" x="172" y="75" width="144" height="39"/>
+                                <state key="normal" title="延迟执行self.perform"/>
+                                <connections>
+                                    <action selector="delayQueue1:" destination="BYZ-38-t0r" eventType="touchUpInside" id="xZH-o7-17c"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iRM-gf-OIt">
+                                <rect key="frame" x="172" y="122" width="144" height="39"/>
+                                <state key="normal" title="延迟执行NSTimer"/>
+                                <connections>
+                                    <action selector="delayQueue2:" destination="BYZ-38-t0r" eventType="touchUpInside" id="uQh-Lw-8RG"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Eh-dJ-Dt5">
+                                <rect key="frame" x="172" y="169" width="158" height="39"/>
+                                <state key="normal" title="延迟执行dispatch_after"/>
+                                <connections>
+                                    <action selector="gcdDelayQueue3:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gZh-Wv-30H"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NRM-Ft-TUp">
+                                <rect key="frame" x="20" y="358" width="144" height="39"/>
+                                <state key="normal" title="GCD只执行一次函数"/>
+                                <connections>
+                                    <action selector="gcdDispatchOnce:" destination="BYZ-38-t0r" eventType="touchUpInside" id="6by-vd-RRQ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i2W-mc-cYd">
+                                <rect key="frame" x="20" y="405" width="144" height="39"/>
+                                <state key="normal" title="GCD快速迭代"/>
+                                <connections>
+                                    <action selector="gcdIteration:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dZc-2O-4CA"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tf8-Pp-ucd">
+                                <rect key="frame" x="172" y="216" width="158" height="38.5"/>
+                                <state key="normal" title="队列组"/>
+                                <connections>
+                                    <action selector="gcdDispatchGroup:" destination="BYZ-38-t0r" eventType="touchUpInside" id="8qF-R3-fSD"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3jH-Sw-PWE">
+                                <rect key="frame" x="20" y="459" width="335" height="200"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="leadingMargin" secondItem="3jH-Sw-PWE" secondAttribute="leading" id="6Ev-FD-XUn"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="3jH-Sw-PWE" secondAttribute="trailing" id="H6p-lg-H56"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="3jH-Sw-PWE" secondAttribute="bottom" constant="8" id="ImL-i9-3db"/>
+                        </constraints>
                     </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="mergerImgView" destination="3jH-Sw-PWE" id="Zu5-VU-TFl"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="436" y="396"/>
+            <point key="canvasLocation" x="75.5" y="379.5"/>
         </scene>
     </scenes>
 </document>

@@ -9,6 +9,11 @@
 import UIKit
 
 class ViewController: UIViewController {
+    
+    var img1:UIImage?
+    var img2:UIImage?
+    
+    @IBOutlet weak var mergerImgView: UIImageView!
 
     /**
         GCD同步+并发队列
@@ -264,6 +269,209 @@ class ViewController: UIViewController {
         
     }
     
+    /**
+        栅栏队列
+        这种队列会强制阻断其前面和后面的其他队列
+        当栅栏队列完成后，后面的队列才会继续执行
+     */
+    @IBAction func gcdBarrierAsync(sender: UIButton) {
+    
+        let queue = dispatch_queue_create("com.k.gcdBarrierAsyncQueue", DISPATCH_QUEUE_CONCURRENT)
+        
+        dispatch_async(queue) { 
+            
+            for i in 0...10 {
+                
+                print("第一个队列~~~~~~~   ", NSThread.currentThread(),"~~~~~~~~ ",i)
+            
+            }
+            
+        }
+        
+        dispatch_async(queue) {
+            
+            for i in 0...10 {
+                
+                print("第二个队列~~~~~~   ", NSThread.currentThread(),"~~~~~~~~ ",i)
+                
+            }
+            
+        }
+        
+        
+        dispatch_barrier_async(queue) { 
+            
+            for _ in 0...10 {
+                
+                print("barrier队列~~~~~~   ", NSThread.currentThread(),"~~~~~~~~AAAAAAAAA ")
+                
+            }
+            
+        }
+        
+        
+        
+        dispatch_async(queue) {
+            
+            for i in 0...10 {
+                
+                print("第三个队列~~~~~~~   ", NSThread.currentThread(),"~~~~~~~~ ",i)
+                
+            }
+            
+        }
+        
+        dispatch_async(queue) {
+            
+            for i in 0...10 {
+                
+                print("第四个队列~~~~~~   ", NSThread.currentThread(),"~~~~~~~~ ",i)
+                
+            }
+            
+        }
+    
+    }
+    
+    /**
+        self.perform 延迟执行
+     */
+    @IBAction func delayQueue1(sender: UIButton) {
+        
+        print("队列开始")
+        
+        self.performSelector(#selector(self.delayTask), withObject: nil, afterDelay: 2)
+        
+        print("队列结束")
+        
+        
+    }
+    
+    func delayTask() {
+        
+        print(NSThread.currentThread(),"执行延迟任务")
+        
+    }
+    
+    /**
+        NSTimer 延迟执行
+     */
+    @IBAction func delayQueue2(sender: UIButton) {
+        
+        print("队列开始")
+        
+        NSTimer.scheduledTimerWithTimeInterval(2, target: self, selector: #selector(self.delayTask), userInfo: nil, repeats: false)
+        
+        print("队列结束")
+        
+    }
+    
+    /**
+        dispatch_after
+     */
+    @IBAction func gcdDelayQueue3(sender: UIButton) {
+        
+        print("队列开始")
+        
+        let queue = dispatch_queue_create("com.k.gcdDelayQueue3", DISPATCH_QUEUE_SERIAL)
+        let delay = 2 * Double(NSEC_PER_SEC)
+        let time = dispatch_time(DISPATCH_TIME_NOW, Int64(delay))
+        
+        dispatch_after(time, queue) {
+            self.delayTask()
+        }
+        
+        print("队列结束")
+        
+    }
+    
+    /**
+        只执行一次
+     */
+    private var globalToken: dispatch_once_t = 0
+    
+    @IBAction func gcdDispatchOnce(sender: UIButton) {
+        
+        dispatch_once(&globalToken) {
+            print("只执行一次")
+        }
+        
+    }
+    
+    /**
+        快速迭代
+        可以指定队列
+     */
+    @IBAction func gcdIteration(sender: UIButton) {
+        
+        let queue = dispatch_queue_create("com.k.gcdIteration", DISPATCH_QUEUE_CONCURRENT)
+        
+//        let queue2 = dispatch_queue_create("com.k.gcdIteration", DISPATCH_QUEUE_SERIAL)
+        
+        dispatch_apply(10, queue) { (index) in
+            
+            print(NSThread.currentThread(),index)
+            
+        }
+        
+    }
+    
+    /**
+        队列组
+     */
+    @IBAction func gcdDispatchGroup(sender: UIButton) {
+        
+        let group = dispatch_group_create()
+        let queue = dispatch_queue_create("com.k.gcdDispatchGroup", DISPATCH_QUEUE_CONCURRENT)
+        
+        // 下载图片1
+        dispatch_group_async(group, queue) {
+            
+            print(NSThread.currentThread(),"下载图片1")
+            
+            // 下载图片1
+            let url = NSURL(string: "http://photo.l99.com/bigger/9f2/1427726080118_72f3dd.jpg")
+            
+            let data = NSData(contentsOfURL: url!)
+            self.img1 = UIImage(data: data!)
+            
+        }
+        
+        // 下载图片2 335 200
+        dispatch_group_async(group, queue) {
+            
+            print(NSThread.currentThread(),"下载图片2")
+            
+            // 下载图片2
+            let url = NSURL(string: "http://img2.3lian.com/2014/f4/168/d/35.jpg")
+            
+            let data = NSData(contentsOfURL: url!)
+            self.img2 = UIImage(data: data!)
+            
+        }
+        
+        dispatch_group_notify(group, queue) {
+            
+            print(NSThread.currentThread(),"队列组")
+            
+            UIGraphicsBeginImageContext(self.mergerImgView.frame.size)
+            
+            self.img1?.drawInRect(CGRectMake(0, 0, 335 * 0.5, 200))
+            self.img2?.drawInRect(CGRectMake(335 * 0.5, 0, 335 * 0.5, 200))
+            
+            let image = UIGraphicsGetImageFromCurrentImageContext()
+            UIGraphicsEndImageContext()
+            
+            dispatch_async(dispatch_get_main_queue(), {
+                
+                print(NSThread.currentThread(),"显示图片")
+                
+                self.mergerImgView.image = image
+            })
+            
+        }
+        
+    }
     
     
     override func viewDidLoad() {
