@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <scenes>
+        <!--ThreadVC-->
+        <scene sceneID="tuL-MS-qRy">
+            <objects>
+                <viewController storyboardIdentifier="NSThread" id="mgt-9I-khK" customClass="NSThreadVC" customModule="ThreadDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="f9p-Fe-vrV"/>
+                        <viewControllerLayoutGuide type="bottom" id="n4n-I5-Ad1"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="gD0-qi-B5E">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rnK-Ka-YkR">
+                                <rect key="frame" x="14" y="69" width="117" height="39"/>
+                                <state key="normal" title="Thread开启线程"/>
+                                <connections>
+                                    <action selector="thread:" destination="mgt-9I-khK" eventType="touchUpInside" id="uxS-dn-2l6"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4xE-EP-xfE" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="336" y="415"/>
+        </scene>
+    </scenes>
+</document>

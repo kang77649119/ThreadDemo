@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class GCDVC: UIViewController {
     
     var img1:UIImage?
     var img2:UIImage?
@@ -237,35 +237,6 @@ class ViewController: UIViewController {
             }
         }
         
-        
-    }
-    
-    /**
-        使用NSThread开启线程
-        并发执行任务
-     */
-    @IBAction func thread(sender: UIButton) {
-        
-        let thread01 = NSThread(target: self, selector: #selector(self.run), object: nil)
-        thread01.name = "线程1"
-        
-        let thread02 = NSThread(target: self, selector: #selector(self.run), object: nil)
-        thread02.name = "线程2"
-        
-        let thread03 = NSThread(target: self, selector: #selector(self.run), object: nil)
-        thread03.name = "线程3"
-        
-        thread01.start()
-        thread02.start()
-        thread03.start()
-
-    }
-    
-    func run() {
-    
-        for i in 0...10 {
-            print(NSThread.currentThread().name!,"~~~~~~~",i)
-        }
         
     }
     
