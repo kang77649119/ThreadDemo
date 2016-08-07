@@ -14,6 +14,7 @@
 		3F6A18351D5347E400E6F50B /* NSThread.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F6A182F1D5347E400E6F50B /* NSThread.storyboard */; };
 		3F6A18361D5347E400E6F50B /* NSThreadVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F6A18301D5347E400E6F50B /* NSThreadVC.swift */; };
 		3F6A18391D53480200E6F50B /* ThreadListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F6A18381D53480200E6F50B /* ThreadListVC.swift */; };
+		3F6ED7C51D53782200AE78C2 /* CustomOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F6ED7C41D53782200AE78C2 /* CustomOperation.swift */; };
 		3F9748EE1D50388A006EB461 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F9748ED1D50388A006EB461 /* AppDelegate.swift */; };
 		3F9748F51D50388A006EB461 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3F9748F41D50388A006EB461 /* Assets.xcassets */; };
 		3F9748F81D50388A006EB461 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F9748F61D50388A006EB461 /* LaunchScreen.storyboard */; };
@@ -27,6 +28,7 @@
 		3F6A182F1D5347E400E6F50B /* NSThread.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = NSThread.storyboard; sourceTree = "<group>"; };
 		3F6A18301D5347E400E6F50B /* NSThreadVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSThreadVC.swift; sourceTree = "<group>"; };
 		3F6A18381D53480200E6F50B /* ThreadListVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThreadListVC.swift; sourceTree = "<group>"; };
+		3F6ED7C41D53782200AE78C2 /* CustomOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomOperation.swift; sourceTree = "<group>"; };
 		3F9748EA1D50388A006EB461 /* ThreadDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ThreadDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F9748ED1D50388A006EB461 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3F9748F41D50388A006EB461 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -59,6 +61,7 @@
 			children = (
 				3F6A182C1D5347E400E6F50B /* NSOperation.storyboard */,
 				3F6A182D1D5347E400E6F50B /* NSOperationVC.swift */,
+				3F6ED7C41D53782200AE78C2 /* CustomOperation.swift */,
 			);
 			path = NSOperation;
 			sourceTree = "<group>";
@@ -184,6 +187,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3F6ED7C51D53782200AE78C2 /* CustomOperation.swift in Sources */,
 				3F6A18391D53480200E6F50B /* ThreadListVC.swift in Sources */,
 				3F9748EE1D50388A006EB461 /* AppDelegate.swift in Sources */,
 				3F6A18341D5347E400E6F50B /* NSOperationVC.swift in Sources */,

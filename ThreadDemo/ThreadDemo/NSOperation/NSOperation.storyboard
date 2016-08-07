@@ -16,13 +16,133 @@
                     <view key="view" contentMode="scaleToFill" id="iLG-wC-NGz">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oP2-NJ-Cmm">
+                                <rect key="frame" x="20" y="66" width="181" height="30"/>
+                                <state key="normal" title="NSBlockOperation+主线程"/>
+                                <connections>
+                                    <action selector="blockOperationMainThread:" destination="5F3-C4-pcq" eventType="touchUpInside" id="bf3-Kh-4KG"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TKk-vV-2kC">
+                                <rect key="frame" x="20" y="104" width="196" height="30"/>
+                                <state key="normal" title="NSBlockOperation+其他线程"/>
+                                <connections>
+                                    <action selector="blockOperationOtherThread:" destination="5F3-C4-pcq" eventType="touchUpInside" id="7sL-aX-9gU"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="USt-WB-zCO">
+                                <rect key="frame" x="20" y="142" width="134" height="30"/>
+                                <state key="normal" title="自定义NSOperation"/>
+                                <connections>
+                                    <action selector="customNSOperation:" destination="5F3-C4-pcq" eventType="touchUpInside" id="u1q-nA-VfM"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EbA-G9-sqk">
+                                <rect key="frame" x="20" y="180" width="134" height="30"/>
+                                <state key="normal" title="手动启动任务"/>
+                                <connections>
+                                    <action selector="commonOperation:" destination="5F3-C4-pcq" eventType="touchUpInside" id="If4-uv-9mA"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MQr-88-VGC">
+                                <rect key="frame" x="20" y="218" width="134" height="30"/>
+                                <state key="normal" title="最大并发数"/>
+                                <connections>
+                                    <action selector="maxConcurrentCount:" destination="5F3-C4-pcq" eventType="touchUpInside" id="Rtf-9Y-XLN"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nlP-tb-KZB">
+                                <rect key="frame" x="20" y="256" width="134" height="30"/>
+                                <state key="normal" title="任务开启------&gt;"/>
+                                <connections>
+                                    <action selector="operationStart:" destination="5F3-C4-pcq" eventType="touchUpInside" id="KVN-pg-WUo"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kM6-Ot-omX">
+                                <rect key="frame" x="169" y="256" width="134" height="30"/>
+                                <state key="normal" title="任务挂起"/>
+                                <connections>
+                                    <action selector="suspended:" destination="5F3-C4-pcq" eventType="touchUpInside" id="jAt-8X-iTR"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gY6-h4-I3u">
+                                <rect key="frame" x="20" y="256" width="134" height="30"/>
+                                <state key="normal" title="任务开启------&gt;"/>
+                                <connections>
+                                    <action selector="operationStart:" destination="5F3-C4-pcq" eventType="touchUpInside" id="2vY-b3-Vz0"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sU9-tJ-tAT">
+                                <rect key="frame" x="17" y="294" width="254" height="30"/>
+                                <state key="normal" title="自定义NSOperation任务开启------&gt;"/>
+                                <connections>
+                                    <action selector="operationStart2:" destination="5F3-C4-pcq" eventType="touchUpInside" id="aKT-IX-Ty8"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6CD-Jr-aIB">
+                                <rect key="frame" x="279" y="294" width="76" height="30"/>
+                                <state key="normal" title="队列取消"/>
+                                <connections>
+                                    <action selector="cancelOperate:" destination="5F3-C4-pcq" eventType="touchUpInside" id="YRf-tN-TJj"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B2n-vs-Vap">
+                                <rect key="frame" x="17" y="332" width="254" height="30"/>
+                                <state key="normal" title="普通NSOperation任务开启------&gt;"/>
+                                <connections>
+                                    <action selector="simpleNSOperationStart:" destination="5F3-C4-pcq" eventType="touchUpInside" id="jZF-It-7Yk"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GxK-9k-4QL">
+                                <rect key="frame" x="279" y="332" width="76" height="30"/>
+                                <state key="normal" title="队列取消"/>
+                                <connections>
+                                    <action selector="cancelOperate:" destination="5F3-C4-pcq" eventType="touchUpInside" id="MKP-Oe-JLs"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sLA-F6-Mwf">
+                                <rect key="frame" x="17" y="370" width="254" height="30"/>
+                                <state key="normal" title="线程通信"/>
+                                <connections>
+                                    <action selector="mergeImgs:" destination="5F3-C4-pcq" eventType="touchUpInside" id="EIc-3A-vpH"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dWF-Fi-so3">
+                                <rect key="frame" x="0.0" y="421" width="375" height="246"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="246" id="UBc-xl-qgQ"/>
+                                    <constraint firstAttribute="width" constant="375" id="YP0-9v-6Az"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pMP-p4-ml9">
+                                <rect key="frame" x="206" y="180" width="60" height="30"/>
+                                <state key="normal" title="任务监听"/>
+                                <connections>
+                                    <action selector="operateListening:" destination="5F3-C4-pcq" eventType="touchUpInside" id="ftn-fo-0PG"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PbG-lU-tcN">
+                                <rect key="frame" x="206" y="142" width="60" height="30"/>
+                                <state key="normal" title="任务依赖"/>
+                                <connections>
+                                    <action selector="operateDependency:" destination="5F3-C4-pcq" eventType="touchUpInside" id="wLO-xv-L8S"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="dWF-Fi-so3" firstAttribute="top" secondItem="sLA-F6-Mwf" secondAttribute="bottom" constant="21" id="36y-0z-Cys"/>
+                        </constraints>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="mergeImg" destination="dWF-Fi-so3" id="NFY-Or-kKb"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="z7C-WC-2az" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="412" y="298"/>
+            <point key="canvasLocation" x="-880.5" y="154.5"/>
         </scene>
     </scenes>
 </document>
