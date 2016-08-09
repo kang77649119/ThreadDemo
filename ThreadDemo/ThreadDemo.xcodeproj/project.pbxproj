@@ -18,6 +18,9 @@
 		3F7340041D58676C00578AEB /* DownloadImg2VC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F7340031D58676C00578AEB /* DownloadImg2VC.swift */; };
 		3F7340061D586C2B00578AEB /* DownloadImg3VC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F7340051D586C2B00578AEB /* DownloadImg3VC.swift */; };
 		3F7340081D587B8D00578AEB /* DownloadImg4VC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F7340071D587B8D00578AEB /* DownloadImg4VC.swift */; };
+		3F7C0B101D59B78E00187586 /* RunLoop.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F7C0B0F1D59B78E00187586 /* RunLoop.storyboard */; };
+		3F7C0B121D59B7B800187586 /* RunLoopVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F7C0B111D59B7B800187586 /* RunLoopVC.swift */; };
+		3F7C0B141D59B9ED00187586 /* RunLoopVC1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F7C0B131D59B9ED00187586 /* RunLoopVC1.swift */; };
 		3F9748EE1D50388A006EB461 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F9748ED1D50388A006EB461 /* AppDelegate.swift */; };
 		3F9748F51D50388A006EB461 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3F9748F41D50388A006EB461 /* Assets.xcassets */; };
 		3F9748F81D50388A006EB461 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F9748F61D50388A006EB461 /* LaunchScreen.storyboard */; };
@@ -40,6 +43,9 @@
 		3F7340031D58676C00578AEB /* DownloadImg2VC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DownloadImg2VC.swift; sourceTree = "<group>"; };
 		3F7340051D586C2B00578AEB /* DownloadImg3VC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DownloadImg3VC.swift; sourceTree = "<group>"; };
 		3F7340071D587B8D00578AEB /* DownloadImg4VC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DownloadImg4VC.swift; sourceTree = "<group>"; };
+		3F7C0B0F1D59B78E00187586 /* RunLoop.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = RunLoop.storyboard; sourceTree = "<group>"; };
+		3F7C0B111D59B7B800187586 /* RunLoopVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RunLoopVC.swift; sourceTree = "<group>"; };
+		3F7C0B131D59B9ED00187586 /* RunLoopVC1.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RunLoopVC1.swift; sourceTree = "<group>"; };
 		3F9748EA1D50388A006EB461 /* ThreadDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ThreadDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F9748ED1D50388A006EB461 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3F9748F41D50388A006EB461 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -99,6 +105,16 @@
 			path = Main;
 			sourceTree = "<group>";
 		};
+		3F7C0B0E1D59B75900187586 /* RunLoop */ = {
+			isa = PBXGroup;
+			children = (
+				3F7C0B0F1D59B78E00187586 /* RunLoop.storyboard */,
+				3F7C0B111D59B7B800187586 /* RunLoopVC.swift */,
+				3F7C0B131D59B9ED00187586 /* RunLoopVC1.swift */,
+			);
+			path = RunLoop;
+			sourceTree = "<group>";
+		};
 		3F9748E11D50388A006EB461 = {
 			isa = PBXGroup;
 			children = (
@@ -118,6 +134,7 @@
 		3F9748EC1D50388A006EB461 /* ThreadDemo */ = {
 			isa = PBXGroup;
 			children = (
+				3F7C0B0E1D59B75900187586 /* RunLoop */,
 				3FACCA311D576AF7007B7F4B /* 多图片下载调优 */,
 				3F6A18371D53480200E6F50B /* Main */,
 				3F6A18281D5347E400E6F50B /* GCD */,
@@ -206,6 +223,7 @@
 			files = (
 				3F9748F81D50388A006EB461 /* LaunchScreen.storyboard in Resources */,
 				3F9748F51D50388A006EB461 /* Assets.xcassets in Resources */,
+				3F7C0B101D59B78E00187586 /* RunLoop.storyboard in Resources */,
 				3F6A18311D5347E400E6F50B /* GCD.storyboard in Resources */,
 				3F6A18351D5347E400E6F50B /* NSThread.storyboard in Resources */,
 				3FACCA391D576E9A007B7F4B /* DownloadImg1.storyboard in Resources */,
@@ -228,10 +246,12 @@
 				3F7340061D586C2B00578AEB /* DownloadImg3VC.swift in Sources */,
 				3F6A18391D53480200E6F50B /* ThreadListVC.swift in Sources */,
 				3F9748EE1D50388A006EB461 /* AppDelegate.swift in Sources */,
+				3F7C0B121D59B7B800187586 /* RunLoopVC.swift in Sources */,
 				3F6A18341D5347E400E6F50B /* NSOperationVC.swift in Sources */,
 				3F6A18321D5347E400E6F50B /* GCDVC.swift in Sources */,
 				3F7340041D58676C00578AEB /* DownloadImg2VC.swift in Sources */,
 				3FACCA3B1D576F45007B7F4B /* DownloadImg1VC.swift in Sources */,
+				3F7C0B141D59B9ED00187586 /* RunLoopVC1.swift in Sources */,
 				3F6A18361D5347E400E6F50B /* NSThreadVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

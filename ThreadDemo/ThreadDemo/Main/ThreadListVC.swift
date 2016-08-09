@@ -10,7 +10,7 @@ import UIKit
 
 class ThreadListVC: UITableViewController {
 
-    let threadList = ["GCD","NSThread","NSOperation","MoreImagesDownload"]
+    let threadList = ["GCD","NSThread","NSOperation","MoreImagesDownload","RunLoop"]
     let cellId = "threadCell"
     
     override func viewDidLoad() {
