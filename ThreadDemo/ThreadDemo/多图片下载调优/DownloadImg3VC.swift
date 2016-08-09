@@ -67,6 +67,8 @@ class DownloadImg3VC: UITableViewController {
                 let url = NSURL(string: appInfo["icon"] as! String)
                 let data = NSData(contentsOfURL: url!)
                 let image = UIImage(data: data!)
+                
+                // 以字典为key,存到imgs中
                 self.imgs![appInfo["icon"] as! String] = image
                 
                 NSThread.sleepForTimeInterval(1)
