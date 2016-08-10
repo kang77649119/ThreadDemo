@@ -11,7 +11,7 @@ import UIKit
 class RunLoopVC: UITableViewController {
 
     let cellId = "cellId"
-    let data = ["RunLoop模式切换"]
+    let data = ["RunLoop模式切换" , "在指定模式下显示图片" , "常驻线程"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,11 +35,20 @@ class RunLoopVC: UITableViewController {
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         
         switch indexPath.row {
+            
             case 0:
-                
                 let targetController = UIStoryboard(name: "RunLoop", bundle: nil).instantiateViewControllerWithIdentifier("RunLoop1") as! RunLoopVC1
                 self.navigationController?.pushViewController(targetController, animated: true)
+            
+            case 1:
+                let targetController = UIStoryboard(name: "RunLoop", bundle: nil).instantiateViewControllerWithIdentifier("RunLoop2") as! RunLoopVC2
+                self.navigationController?.pushViewController(targetController, animated: true)
                 
+            case 2:
+                let targetController = UIStoryboard(name: "RunLoop", bundle: nil).instantiateViewControllerWithIdentifier("RunLoop3") as! RunLoopVC3
+                self.navigationController?.pushViewController(targetController, animated: true)
+
+            
             default:
                 return
         }

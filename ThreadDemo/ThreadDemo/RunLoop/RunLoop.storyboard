@@ -32,7 +32,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hgr-FH-GBb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="417.5" y="435.5"/>
+            <point key="canvasLocation" x="-14.5" y="556.5"/>
         </scene>
         <!--Run LoopVC1-->
         <scene sceneID="Nye-SA-aT9">
@@ -51,7 +51,81 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HPb-jH-NO8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="815.5" y="435.5"/>
+            <point key="canvasLocation" x="382.5" y="556.5"/>
+        </scene>
+        <!--Run LoopVC3-->
+        <scene sceneID="QQ1-kB-wgt">
+            <objects>
+                <viewController storyboardIdentifier="RunLoop3" id="53j-g4-eTL" customClass="RunLoopVC3" customModule="ThreadDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="duI-cg-TBC"/>
+                        <viewControllerLayoutGuide type="bottom" id="CFB-vh-WGz"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Ucj-gK-o2Z">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="t9f-Q4-pWf">
+                                <rect key="frame" x="0.0" y="64" width="375" height="167"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="doN-ye-yRm">
+                                <rect key="frame" x="0.0" y="349" width="375" height="179"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v1s-cm-EGb">
+                                <rect key="frame" x="81" y="281" width="212" height="30"/>
+                                <state key="normal" title="利用常驻线程，再执行任务"/>
+                                <connections>
+                                    <action selector="executeOtherOperate:" destination="53j-g4-eTL" eventType="touchUpInside" id="8cJ-Oa-TBb"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="imgView" destination="t9f-Q4-pWf" id="5fb-jb-wh3"/>
+                        <outlet property="secondImgView" destination="doN-ye-yRm" id="1Qs-RW-Xcy"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PVi-On-WvO" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-14.5" y="1297.5"/>
+        </scene>
+        <!--Run LoopVC2-->
+        <scene sceneID="NzJ-9m-Uu8">
+            <objects>
+                <viewController storyboardIdentifier="RunLoop2" id="2xT-0c-uav" customClass="RunLoopVC2" customModule="ThreadDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="i3h-Z5-Kdh"/>
+                        <viewControllerLayoutGuide type="bottom" id="qcs-89-rp9"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="fdr-Cp-gxe">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="ca6-KZ-JIi">
+                                <rect key="frame" x="20" y="253" width="240" height="162"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="KCU-B9-WfX">
+                                <rect key="frame" x="20" y="64" width="240" height="175"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="imgView" destination="KCU-B9-WfX" id="WPV-uJ-1MT"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="piQ-6P-tS4" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="769.5" y="556.5"/>
         </scene>
     </scenes>
 </document>

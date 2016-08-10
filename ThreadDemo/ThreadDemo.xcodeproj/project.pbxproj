@@ -24,6 +24,9 @@
 		3F9748EE1D50388A006EB461 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F9748ED1D50388A006EB461 /* AppDelegate.swift */; };
 		3F9748F51D50388A006EB461 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3F9748F41D50388A006EB461 /* Assets.xcassets */; };
 		3F9748F81D50388A006EB461 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F9748F61D50388A006EB461 /* LaunchScreen.storyboard */; };
+		3F9F78741D5B0569000AEEBA /* RunLoopVC2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F9F78731D5B0569000AEEBA /* RunLoopVC2.swift */; };
+		3F9F78761D5B0995000AEEBA /* KThread.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F9F78751D5B0995000AEEBA /* KThread.swift */; };
+		3F9F78781D5B1887000AEEBA /* RunLoopVC3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F9F78771D5B1887000AEEBA /* RunLoopVC3.swift */; };
 		3FACCA331D576B06007B7F4B /* MoreImagesDownload.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FACCA321D576B06007B7F4B /* MoreImagesDownload.swift */; };
 		3FACCA351D576B3F007B7F4B /* MoreImagesDownload.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3FACCA341D576B3F007B7F4B /* MoreImagesDownload.storyboard */; };
 		3FACCA371D576D81007B7F4B /* apps.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3FACCA361D576D81007B7F4B /* apps.plist */; };
@@ -51,6 +54,9 @@
 		3F9748F41D50388A006EB461 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3F9748F71D50388A006EB461 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3F9748F91D50388A006EB461 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3F9F78731D5B0569000AEEBA /* RunLoopVC2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RunLoopVC2.swift; sourceTree = "<group>"; };
+		3F9F78751D5B0995000AEEBA /* KThread.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KThread.swift; sourceTree = "<group>"; };
+		3F9F78771D5B1887000AEEBA /* RunLoopVC3.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RunLoopVC3.swift; sourceTree = "<group>"; };
 		3FACCA321D576B06007B7F4B /* MoreImagesDownload.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoreImagesDownload.swift; sourceTree = "<group>"; };
 		3FACCA341D576B3F007B7F4B /* MoreImagesDownload.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MoreImagesDownload.storyboard; sourceTree = "<group>"; };
 		3FACCA361D576D81007B7F4B /* apps.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = apps.plist; sourceTree = "<group>"; };
@@ -111,6 +117,9 @@
 				3F7C0B0F1D59B78E00187586 /* RunLoop.storyboard */,
 				3F7C0B111D59B7B800187586 /* RunLoopVC.swift */,
 				3F7C0B131D59B9ED00187586 /* RunLoopVC1.swift */,
+				3F9F78731D5B0569000AEEBA /* RunLoopVC2.swift */,
+				3F9F78751D5B0995000AEEBA /* KThread.swift */,
+				3F9F78771D5B1887000AEEBA /* RunLoopVC3.swift */,
 			);
 			path = RunLoop;
 			sourceTree = "<group>";
@@ -243,10 +252,13 @@
 				3FACCA331D576B06007B7F4B /* MoreImagesDownload.swift in Sources */,
 				3F6ED7C51D53782200AE78C2 /* CustomOperation.swift in Sources */,
 				3F7340081D587B8D00578AEB /* DownloadImg4VC.swift in Sources */,
+				3F9F78761D5B0995000AEEBA /* KThread.swift in Sources */,
 				3F7340061D586C2B00578AEB /* DownloadImg3VC.swift in Sources */,
 				3F6A18391D53480200E6F50B /* ThreadListVC.swift in Sources */,
+				3F9F78781D5B1887000AEEBA /* RunLoopVC3.swift in Sources */,
 				3F9748EE1D50388A006EB461 /* AppDelegate.swift in Sources */,
 				3F7C0B121D59B7B800187586 /* RunLoopVC.swift in Sources */,
+				3F9F78741D5B0569000AEEBA /* RunLoopVC2.swift in Sources */,
 				3F6A18341D5347E400E6F50B /* NSOperationVC.swift in Sources */,
 				3F6A18321D5347E400E6F50B /* GCDVC.swift in Sources */,
 				3F7340041D58676C00578AEB /* DownloadImg2VC.swift in Sources */,
