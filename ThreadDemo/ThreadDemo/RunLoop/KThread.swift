@@ -11,7 +11,7 @@ import UIKit
 class KThread: NSThread {
     
     deinit {
-        print("定时器销毁")
+        print("线程销毁")
     }
     
 }

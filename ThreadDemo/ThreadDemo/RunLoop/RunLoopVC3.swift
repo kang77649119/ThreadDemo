@@ -31,6 +31,16 @@ class RunLoopVC3: UIViewController {
     }
     
     /**
+        显示图片
+     */
+    func showImage() {
+        
+        print("显示图片的线程信息-----", NSThread.currentThread())
+        self.imgView.image = UIImage(named: "1")
+        print("线程执行完成")
+    }
+    
+    /**
         启动线程
      */
     func createThread() {
@@ -41,7 +51,7 @@ class RunLoopVC3: UIViewController {
             self.performSelector(#selector(self.showImage), onThread: self.thread!, withObject: nil, waitUntilDone: true)
             
         } else {
-            
+        
             print("创建线程")
             
             self.thread = KThread(target: self, selector: #selector(self.createRunLoop), object: nil)
@@ -51,16 +61,7 @@ class RunLoopVC3: UIViewController {
         
     }
    
-    /**
-        显示图片
-     */
-    func showImage() {
-        
-        print("显示图片的线程信息-----", NSThread.currentThread())
-        self.imgView.image = UIImage(named: "1")
-        
-        print("线程执行完成")
-    }
+    
     
     func createRunLoop() {
         
